@@ -1,129 +1,140 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="author" content="Drew Long">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Academic Program Search</title>
-    <script src="jquery.js"></script>    
-    <script src="scripts.js"></script>
-  </head>
-  <body>
-    <header>
-      <h1>UF - University of Florida</h1>
-      <nav>
-        <button>Nav</button>
-      </nav>
-    </header>
-    <div id="search-filter-buttons">
-      <h2>Academics</h2>
-      <h3>Program Search</h3>
-      <form id="search" action="" method="get">
-        <fieldset>
-          <input type="search" placeholder="Search...">
-        </fieldset>
-        <button type="submit">
-          <i class="fa fa-search"></i>
-        </button>
-        <!-- Would like to add text below button that updates dynamically and describes results, e.g., "Showing 245 results" -->
-      </form>
-      <button class="filter">
-        <a><i class="fa fa-bars" aria-hidden="true"></i><span>Filter</span></a>
-      </button>
-    </div>
-    <div id="results">
-      <ul id="programs">
-        <li data-id="1">Computer Science</li>
-        <li data-id="2">Digital Arts and Sciences</li>
-        <li data-id="3">Telecommunication: Media and Society </li>
-        <li data-id="4">Accounting</li>
-        <li data-id="5">Accounting Minor</li>
-        <li data-id="6">Accounting Minor UF Online</li>
-        <li data-id="7">Actuarial Science Minor</li>
-        <li data-id="8">Advanced Engineering Ceramics Certificate</li>
-        <li data-id="9">Advertising</li>
-        <li data-id="10">Advertising | Persuasive Messaging UF Online</li>
-        <li data-id="11">Aerospace Engineering</li>
-        <li data-id="12">Aerospace Leadership Minor</li>
-        <li data-id="13">African Languages</li>
-        <li data-id="14">African Studies Minor</li>
-        <li data-id="15">African-American Studies</li>
-        <li data-id="16">African-American Studies Minor</li>
-        <li data-id="17">Agricultural and Natural Resource Communication Minor</li>
-        <li data-id="18">Agricultural and Natural Resource Ethics and Policy Minor</li>
-        <li data-id="19">Agricultural and Natural Resource Law Minor</li>
-        <li data-id="20">Agricultural Curriculum and Development Minor</li>
-        <li data-id="21">Agricultural Education and Communication</li>
-        <li data-id="22">Agricultural Operations Management</li>
-        <li data-id="23">Agroecology and Sustainable Food Systems Certificate</li>
-        <li data-id="24">American Indian and Indigenous Studies Minor</li>
-        <li data-id="25">Animal Genetics Certificate</li>
-        <li data-id="26">Animal Sciences</li>
-        <li data-id="27">Anthropology</li>
-        <li data-id="28">Anthropology Minor</li>
-        <li data-id="29">Anthropology Minor UF Online</li>
-        <li data-id="30">Anthropology UF Online</li>
-        <li data-id="31">Applied Physiology and Kinesiology</li>
-        <li data-id="32">Applied Theater for Health Certificate</li>
-        <li data-id="33">Arabic</li>
-        <li data-id="34">Arabic Language and Literature Minor</li>
-        <li data-id="35">Architecture</li>
-        <li data-id="36">Art Education Certificate</li>
-        <li data-id="37">Art History</li>
-        <li data-id="38">Art History Minor</li>
-        <li data-id="39">Art History Minor | New World School of the Arts</li>
-        <li data-id="40">Art Minor</li>
-        <li data-id="41">Art | BA</li>
-        <li data-id="42">Art | BFA</li>
-        <li data-id="43">Artificial Intelligence Fundamentals and Applications Certificate</li>
-        <li data-id="44">Asian Studies Minor</li>
-        <li data-id="45">Asian-American Studies Minor</li>
-        <li data-id="46">Astronomy and Astrophysics</li>
-      </ul>
-    </div>
-    <div id="filter-panel">
-      <div id="program-type">
-        <h3>Program Type</h3>
-        <form action="" method="get">
-          <fieldset>
-            <ul>
-              <li>
-                <label>
-                  <input type="checkbox" value="Bachelors" checked>Bachelors
-                </label>
-                <label>
-                  <input type="checkbox" value="Masters" checked>Masters
-                </label>
-                <label>
-                  <input type="checkbox" value="Doctoral" checked>Doctoral
-                </label>
-                <label>
-                  <input type="checkbox" value="Certificate" checked>Certificate
-                </label>
-                <label>
-                  <input type="checkbox" value="Non-degree" checked>Non-degree
-                </label>
-              </li>
-            </ul>
-          </fieldset>
-        </form>
-      </div>
-      <div id="online">
-        <h3>UF Online</h3>
-        <form action="" method="get">
-          <fieldset>
-            <ul>
-              <li>
-                <label>
-                  <input type="checkbox" value="Online" checked>Online only
-                </label>
-              </li>
-            </ul>
-          </fieldset>
-        </form>
-      </div>
-<!-- Let's leave this stuff off for now, for simplicity's sake.
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="author" content="Drew Long" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+		/>
+		<title>Academic Program Search</title>
+		<script src="jquery.js"></script>
+		<script src="scripts.js"></script>
+	</head>
+	<body>
+		<header>
+			<h1>UF - University of Florida</h1>
+			<nav>
+				<button>Nav</button>
+			</nav>
+		</header>
+		<div id="search-filter-buttons">
+			<h2>Academics</h2>
+			<h3>Program Search</h3>
+			<form id="search" action="" method="get">
+				<fieldset>
+					<input type="search" placeholder="Search..." />
+				</fieldset>
+				<button type="submit">
+					<i class="fa fa-search"></i>
+				</button>
+				<!-- Would like to add text below button that updates dynamically and describes results, e.g., "Showing 245 results" -->
+			</form>
+			<button class="filter">
+				<a><i class="fa fa-bars" aria-hidden="true"></i><span>Filter</span></a>
+			</button>
+		</div>
+		<div id="results">
+			<ul id="programs">
+				<li data-id="1">Computer Science</li>
+				<li data-id="2">Digital Arts and Sciences</li>
+				<li data-id="3">Telecommunication: Media and Society</li>
+				<li data-id="4">Accounting</li>
+				<li data-id="5">Accounting Minor</li>
+				<li data-id="6">Accounting Minor UF Online</li>
+				<li data-id="7">Actuarial Science Minor</li>
+				<li data-id="8">Advanced Engineering Ceramics Certificate</li>
+				<li data-id="9">Advertising</li>
+				<li data-id="10">Advertising | Persuasive Messaging UF Online</li>
+				<li data-id="11">Aerospace Engineering</li>
+				<li data-id="12">Aerospace Leadership Minor</li>
+				<li data-id="13">African Languages</li>
+				<li data-id="14">African Studies Minor</li>
+				<li data-id="15">African-American Studies</li>
+				<li data-id="16">African-American Studies Minor</li>
+				<li data-id="17">
+					Agricultural and Natural Resource Communication Minor
+				</li>
+				<li data-id="18">
+					Agricultural and Natural Resource Ethics and Policy Minor
+				</li>
+				<li data-id="19">Agricultural and Natural Resource Law Minor</li>
+				<li data-id="20">Agricultural Curriculum and Development Minor</li>
+				<li data-id="21">Agricultural Education and Communication</li>
+				<li data-id="22">Agricultural Operations Management</li>
+				<li data-id="23">
+					Agroecology and Sustainable Food Systems Certificate
+				</li>
+				<li data-id="24">American Indian and Indigenous Studies Minor</li>
+				<li data-id="25">Animal Genetics Certificate</li>
+				<li data-id="26">Animal Sciences</li>
+				<li data-id="27">Anthropology</li>
+				<li data-id="28">Anthropology Minor</li>
+				<li data-id="29">Anthropology Minor UF Online</li>
+				<li data-id="30">Anthropology UF Online</li>
+				<li data-id="31">Applied Physiology and Kinesiology</li>
+				<li data-id="32">Applied Theater for Health Certificate</li>
+				<li data-id="33">Arabic</li>
+				<li data-id="34">Arabic Language and Literature Minor</li>
+				<li data-id="35">Architecture</li>
+				<li data-id="36">Art Education Certificate</li>
+				<li data-id="37">Art History</li>
+				<li data-id="38">Art History Minor</li>
+				<li data-id="39">Art History Minor | New World School of the Arts</li>
+				<li data-id="40">Art Minor</li>
+				<li data-id="41">Art | BA</li>
+				<li data-id="42">Art | BFA</li>
+				<li data-id="43">
+					Artificial Intelligence Fundamentals and Applications Certificate
+				</li>
+				<li data-id="44">Asian Studies Minor</li>
+				<li data-id="45">Asian-American Studies Minor</li>
+				<li data-id="46">Astronomy and Astrophysics</li>
+			</ul>
+		</div>
+		<div id="filter-panel">
+			<div id="program-type">
+				<h3>Program Type</h3>
+				<form action="" method="get">
+					<fieldset>
+						<ul>
+							<li>
+								<label>
+									<input type="checkbox" value="Bachelors" />Bachelors
+								</label>
+								<label>
+									<input type="checkbox" value="Masters" />Masters
+								</label>
+								<label>
+									<input type="checkbox" value="Doctoral" />Doctoral
+								</label>
+								<label>
+									<input type="checkbox" value="Certificate" />Certificate
+								</label>
+								<label>
+									<input type="checkbox" value="Non-degree" />Non-degree
+								</label>
+							</li>
+						</ul>
+					</fieldset>
+				</form>
+			</div>
+			<div id="online">
+				<h3>UF Online</h3>
+				<form action="" method="get">
+					<fieldset>
+						<ul>
+							<li>
+								<label>
+									<input type="checkbox" value="Online" />Online only
+								</label>
+							</li>
+						</ul>
+					</fieldset>
+				</form>
+			</div>
+			<!-- Let's leave this stuff off for now, for simplicity's sake.
       <div id="pursuit">
         <h3>Pursuit</h3>
         <form action="" method="get">
@@ -173,6 +184,6 @@
           </fieldset>
         </form>
       </div> -->
-    </div>
-  </body>
-  </html>
+		</div>
+	</body>
+</html>
