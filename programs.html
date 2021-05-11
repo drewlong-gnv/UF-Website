@@ -1,235 +1,265 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<meta name="author" content="Drew Long" />
-		<link
-			rel="stylesheet"
-			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-		/>
-		<title>Academic Program Search</title>
-		<script src="jquery.js"></script>
-		<script src="scripts.js"></script>
-	</head>
-	<body>
-		<header>
-			<h1>UF - University of Florida</h1>
-			<nav>
-				<button>Nav</button>
-			</nav>
-		</header>
-		<div id="search-filter-buttons">
-			<h2>Academics</h2>
-			<h3>Program Search</h3>
-			<form id="search" action="" method="get">
-				<fieldset>
-					<input type="search" placeholder="Search..." />
-				</fieldset>
-				<button type="submit">
-					<i class="fa fa-search"></i>
-				</button>
-				<!-- Would like to add text below button that updates dynamically and describes results, e.g., "Showing 245 results" -->
-			</form>
-			<button class="filter">
-				<a><i class="fa fa-bars" aria-hidden="true"></i><span>Filter</span></a>
-			</button>
-		</div>
-		<div id="results">
-			<ul id="programs">
-				<li data-id="1">Computer Science</li>
-				<li data-id="2">Digital Arts and Sciences</li>
-				<li data-id="3">Telecommunication: Media and Society</li>
-				<li data-id="4">Accounting</li>
-				<li data-id="5">Accounting Minor</li>
-				<li data-id="6">Accounting Minor UF Online</li>
-				<li data-id="7">Actuarial Science Minor</li>
-				<li data-id="8">Advanced Engineering Ceramics Certificate</li>
-				<li data-id="9">Advertising</li>
-				<li data-id="10">Advertising | Persuasive Messaging UF Online</li>
-				<li data-id="11">Aerospace Engineering</li>
-				<li data-id="12">Aerospace Leadership Minor</li>
-				<li data-id="13">African Languages</li>
-				<li data-id="14">African Studies Minor</li>
-				<li data-id="15">African-American Studies</li>
-				<li data-id="16">African-American Studies Minor</li>
-				<li data-id="17">
-					Agricultural and Natural Resource Communication Minor
-				</li>
-				<li data-id="18">
-					Agricultural and Natural Resource Ethics and Policy Minor
-				</li>
-				<li data-id="19">Agricultural and Natural Resource Law Minor</li>
-				<li data-id="20">Agricultural Curriculum and Development Minor</li>
-				<li data-id="21">Agricultural Education and Communication</li>
-				<li data-id="22">Agricultural Operations Management</li>
-				<li data-id="23">
-					Agroecology and Sustainable Food Systems Certificate
-				</li>
-				<li data-id="24">American Indian and Indigenous Studies Minor</li>
-				<li data-id="25">Animal Genetics Certificate</li>
-				<li data-id="26">Animal Sciences</li>
-				<li data-id="27">Anthropology</li>
-				<li data-id="28">Anthropology Minor</li>
-				<li data-id="29">Anthropology Minor UF Online</li>
-				<li data-id="30">Anthropology UF Online</li>
-				<li data-id="31">Applied Physiology and Kinesiology</li>
-				<li data-id="32">Applied Theater for Health Certificate</li>
-				<li data-id="33">Arabic</li>
-				<li data-id="34">Arabic Language and Literature Minor</li>
-				<li data-id="35">Architecture</li>
-				<li data-id="36">Art Education Certificate</li>
-				<li data-id="37">Art History</li>
-				<li data-id="38">Art History Minor</li>
-				<li data-id="39">Art History Minor | New World School of the Arts</li>
-				<li data-id="40">Art Minor</li>
-				<li data-id="41">Art | BA</li>
-				<li data-id="42">Art | BFA</li>
-				<li data-id="43">
-					Artificial Intelligence Fundamentals and Applications Certificate
-				</li>
-				<li data-id="44">Asian Studies Minor</li>
-				<li data-id="45">Asian-American Studies Minor</li>
-				<li data-id="46">Astronomy and Astrophysics</li>
-				<li data-id="47">Arts in Medicine (Graduate Certificate)</li>
-				<li data-id="48">Computer Science (Ph.D)</li>
-				<li data-id="49">Curriculum and Instruction (M.Ed)</li>
-				<li data-id="50">Curriculum and Instruction (Ph.D)</li>
-				<li data-id="51">Computer Science</li>
-				<li data-id="52">Linguistics (B.S.)</li>
-				<li data-id="53">Linguistics (M.A.)</li>
-				<li data-id="54">Linguistics (Ph.D)</li>
-			</ul>
-		</div>
-		<div id="filter-panel">
-			<div id="program-type">
-				<h3>Program Type</h3>
-				<form action="" method="get">
-					<fieldset>
-						<ul>
-							<li>
-								<label>
-									<input type="checkbox" value="Bachelors" />Bachelors
-								</label>
-								<label>
-									<input type="checkbox" value="Masters" />Masters
-								</label>
-								<label>
-									<input type="checkbox" value="Doctoral" />Doctoral
-								</label>
-								<label>
-									<input type="checkbox" value="Certificate" />Certificate
-								</label>
-								<label>
-									<input type="checkbox" value="Non-degree" />Non-degree
-								</label>
-							</li>
-						</ul>
-					</fieldset>
-				</form>
-			</div>
-			<div id="online">
-				<h3>UF Online</h3>
-				<form action="" method="get">
-					<fieldset>
-						<ul>
-							<li>
-								<label>
-									<input type="checkbox" value="Online" />Online only
-								</label>
-							</li>
-						</ul>
-					</fieldset>
-				</form>
-			</div>
-			<div id="pursuit">
-				<h3>Pursuit</h3>
-				<form action="" method="get">
-				<fieldset>
-					<ul>
-						<li>
-							<label>
-							<input type="checkbox" value="Animals" checked>Animals
-							</label>
-						</li>
-						<li>
-							<label>
-							<input type="checkbox" value="Art and Design" checked>Art and Design
-							</label>
-						</li>
-						<li>
-							<label>
-							<input type="checkbox" value="Business" checked>Business
-							</label>
-						</li>
-						<li>
-							<label>
-							<input type="checkbox" value="Communication" checked>Communication
-							</label>
-						</li>
-						<li>
-							<label>
-							<input type="checkbox" value="Earth Sciences" checked>Earth Sciences
-							</label>
-						</li>
-						<li>
-							<label>
-							<input type="checkbox" value="Health and Wellness" checked>Health and Wellness
-							</label>
-						</li>
-						<li>
-							<label>
-							<input type="checkbox" value="Social Sciences" checked>Social Sciences
-							</label>
-						</li>
-						<li>
-							<label>
-							<input type="checkbox" value="Technology" checked>Technology
-							</label>
-						</li>
-					</ul>
-				</fieldset>
-				</form>
-			</div>
-			<div id="college">
-				<h3>College</h3>
-				<form action="" method="get">
-				<fieldset>
-					<ul>
-						<li>
-							<label>
-							<input type="checkbox" value="Agricultural and Life Sciences" checked>Agricultural and Life Sciences
-							</label>
-						</li>
-						<li>
-							<label>
-							<input type="checkbox" value="Arts" checked>Arts
-							</label>
-						</li>
-						<li>
-							<label>
-							<input type="checkbox" value="Business, Warrington College" checked>Business, Warrington College
-							</label>
-						</li>
-						<li>
-							<label>
-							<input type="checkbox" value="Education" checked>Education
-							</label>
-						</li>
-						<li>
-							<label>
-							<input type="checkbox" value="Engineering, Herbert Wertheim College" checked>Engineering, Herbert Wertheim College
-							</label>
-						</li>
-						<li>
-							<label>
-							<input type="checkbox" value="Liberal Arts and Sciences" checked>Liberal Arts and Sciences
-							</label>
-						</li>
-					</ul>
-				</fieldset>
-				</form>
-			</div>
-		</div>
-	</body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Drew Long" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <title>Academic Program Search</title>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="stylesheet" href="https://use.typekit.net/nkp6ccx.css" />
+    <script src="jquery.js"></script>
+    <script src="scripts-filter.js"></script>
+    <script src="scripts.js"></script>
+  </head>
+  <body>
+    <header>
+      <a href="#" class="svg">
+        <svg xmlns="http://www.w3.org/2000/svg" width="230.66" height="44" viewbox="0 0 230.66 44">
+          <g transform="translate(-19.648 -11.5)">
+            <path
+              d="M2.648,10.469H14.156v4.055H10.523V31.07a16.856,16.856,0,0,0,.668,5.074,9.287,9.287,0,0,0,1.852,3.422A7.028,7.028,0,0,0,15.855,41.5a10.126,10.126,0,0,0,3.574.609,12.117,12.117,0,0,0,3.7-.539,6.74,6.74,0,0,0,2.895-1.816,8.642,8.642,0,0,0,1.875-3.4,17.841,17.841,0,0,0,.668-5.285V14.523H24.727V10.469H36.234v4.055H33.07V30.555A20.162,20.162,0,0,1,32,37.375a14.5,14.5,0,0,1-2.918,4.992,12.233,12.233,0,0,1-4.359,3.059,13.9,13.9,0,0,1-5.391,1.043,13.419,13.419,0,0,1-5.262-1.031,12.03,12.03,0,0,1-4.266-3.023,14.433,14.433,0,0,1-2.859-4.863,19.19,19.19,0,0,1-1.043-6.574V14.523H2.648Zm37.031,0H65.133V20.523h-4.8v-6H47.648V25.938H59.859v3.938H47.648V41.969h3.563V46H39.68V41.969h3.375V14.523H39.68Z"
+              transform="translate(17 5)"
+              fill="#fff"
+            />
+            <line y2="44" transform="translate(87.5 11.5)" fill="none" stroke="#f37736" stroke-width="2" />
+            <path
+              d="M.883,14.156H4.719v1.352H3.508v5.516a5.619,5.619,0,0,0,.223,1.691,3.1,3.1,0,0,0,.617,1.141,2.343,2.343,0,0,0,.938.645,3.375,3.375,0,0,0,1.191.2,4.039,4.039,0,0,0,1.234-.18,2.247,2.247,0,0,0,.965-.605A2.881,2.881,0,0,0,9.3,22.785a5.947,5.947,0,0,0,.223-1.762V15.508H8.242V14.156h3.836v1.352H11.023v5.344a6.721,6.721,0,0,1-.355,2.273A4.834,4.834,0,0,1,9.7,24.789a4.078,4.078,0,0,1-1.453,1.02,4.632,4.632,0,0,1-1.8.348,4.473,4.473,0,0,1-1.754-.344A4.01,4.01,0,0,1,3.27,24.8a4.811,4.811,0,0,1-.953-1.621,6.4,6.4,0,0,1-.348-2.191V15.508H.883Zm21.752,0h3.844v1.352H25.471V26h-2l-5.508-9.82v8.477h1.219V26H15.338V24.656h1.094V15.508H15.307V14.141h3.188L23.9,23.867l.063-.375V15.508H22.635Zm7.439,0h3.781v1.352H32.73v9.148h1.125V26H30.074V24.656H31.2V15.508H30.074Zm14.892,0H48.81v1.352H47.787L43.951,26H41.8L38.021,15.508H36.974V14.156h3.844v1.352H39.787l3.039,9.133,3.258-9.133H44.967Zm6.885,0h8.484v3.352h-1.6v-2H54.507V19.3h3.555v1.344H54.507v4.016h4.227v-2h1.6V26H51.851V24.656h1.125V15.508H51.851Zm12.127,0h4.93a4.9,4.9,0,0,1,1.457.207,3.359,3.359,0,0,1,1.156.609,2.759,2.759,0,0,1,.762,1,3.309,3.309,0,0,1,.273,1.383,2.519,2.519,0,0,1-.16.879,3.046,3.046,0,0,1-.445.8,3.387,3.387,0,0,1-.676.66,3.091,3.091,0,0,1-.852.445,1.779,1.779,0,0,1,.395.246,2.241,2.241,0,0,1,.375.391,3.181,3.181,0,0,1,.32.523,3.222,3.222,0,0,1,.23.629l.656,2.578h1.023L73.439,26h-2.3l-.883-3.6a2.825,2.825,0,0,0-.738-1.426,1.923,1.923,0,0,0-1.355-.457H66.634v4.141h1.188V26H63.978V24.656H65.1V15.508H63.978Zm2.656,1.352v3.727h2.273a2.7,2.7,0,0,0,.816-.117,1.779,1.779,0,0,0,.641-.352,1.621,1.621,0,0,0,.422-.582,2,2,0,0,0,.152-.809A1.782,1.782,0,0,0,70.408,16a2.428,2.428,0,0,0-1.687-.492Zm16.885,1.867a1.751,1.751,0,0,0-.25-1.031,1.942,1.942,0,0,0-.551-.527,2.536,2.536,0,0,0-.66-.281,2.731,2.731,0,0,0-.719-.1,3.551,3.551,0,0,0-1.039.137,2.206,2.206,0,0,0-.738.371,1.548,1.548,0,0,0-.441.547,1.511,1.511,0,0,0-.148.656,1.648,1.648,0,0,0,.184.832,1.534,1.534,0,0,0,.465.508,2.408,2.408,0,0,0,.621.3q.34.109.652.219l1.578.516a7.55,7.55,0,0,1,1.254.516,3.431,3.431,0,0,1,.91.684,2.7,2.7,0,0,1,.559.91,3.426,3.426,0,0,1,.191,1.2,3.093,3.093,0,0,1-.3,1.359,3.3,3.3,0,0,1-.84,1.086A3.982,3.982,0,0,1,82.96,26a4.915,4.915,0,0,1-1.637.262,5.174,5.174,0,0,1-1.562-.207,3.43,3.43,0,0,1-1.09-.555,2.9,2.9,0,0,1-.707-.793,4.339,4.339,0,0,1-.414-.914h-.594V22.445h1.969a2.92,2.92,0,0,0,.184,1.227,1.665,1.665,0,0,0,.512.6,2.346,2.346,0,0,0,.781.359,3.869,3.869,0,0,0,1,.121,3.4,3.4,0,0,0,.957-.125,2.115,2.115,0,0,0,.727-.363,1.6,1.6,0,0,0,.461-.578,1.784,1.784,0,0,0,.16-.77,1.545,1.545,0,0,0-.2-.809A1.967,1.967,0,0,0,83,21.539a2.975,2.975,0,0,0-.684-.383q-.371-.148-.715-.258l-1.711-.484a5.02,5.02,0,0,1-1.027-.437,3.042,3.042,0,0,1-.8-.648,2.73,2.73,0,0,1-.512-.895,3.568,3.568,0,0,1-.18-1.184,3.082,3.082,0,0,1,.266-1.273,2.959,2.959,0,0,1,.781-1.039,3.757,3.757,0,0,1,1.262-.7,5.289,5.289,0,0,1,1.707-.254,4.359,4.359,0,0,1,1.168.148,3.693,3.693,0,0,1,.969.418,3.394,3.394,0,0,1,.766.648,3.911,3.911,0,0,1,.559.832h.586v1.344Zm5.463-3.219h3.781v1.352H91.638v9.148h1.125V26H88.982V24.656h1.125V15.508H88.982ZM99.5,24.656h1.086V15.438h-2.7v1.844h-1.6V14.156h10.563v3.125h-1.6V15.438h-3.125v9.219h1.219V26H99.5Zm10.143-10.5h3.844v1.352h-1.125l2.227,3.8,2.383-3.8h-1.234V14.156h3.844v1.352h-1.008l-3.328,5.047v4.1h1.219V26h-3.844V24.656H113.7V20.516l-3.141-5.008h-.922Zm17.4,7.9a5.5,5.5,0,0,1,.725-2.751,5.28,5.28,0,0,1,.835-1.1,5.428,5.428,0,0,1,1.077-.844,5.314,5.314,0,0,1,1.261-.545,5.015,5.015,0,0,1,1.393-.193,4.338,4.338,0,0,1,1.679.321,4.045,4.045,0,0,1,2.219,2.188,4.064,4.064,0,0,1,.321,1.613,5.511,5.511,0,0,1-.193,1.468,5.571,5.571,0,0,1-1.371,2.417,5.111,5.111,0,0,1-1.077.853,5.378,5.378,0,0,1-1.27.545,5.094,5.094,0,0,1-1.406.193,4.3,4.3,0,0,1-1.679-.321,4.1,4.1,0,0,1-1.327-.883,3.993,3.993,0,0,1-.875-1.323A4.275,4.275,0,0,1,127.045,22.054Zm1.837-.123a3.318,3.318,0,0,0,.18,1.121,2.508,2.508,0,0,0,.505.861,2.262,2.262,0,0,0,.782.554,2.5,2.5,0,0,0,1,.2,2.965,2.965,0,0,0,1.252-.281,3.4,3.4,0,0,0,1.077-.782,3.906,3.906,0,0,0,.751-1.2,4.073,4.073,0,0,0,.286-1.547,3.07,3.07,0,0,0-.189-1.107,2.52,2.52,0,0,0-.523-.844,2.289,2.289,0,0,0-.787-.541,2.541,2.541,0,0,0-.989-.189,2.965,2.965,0,0,0-1.252.277,3.4,3.4,0,0,0-1.068.773,3.81,3.81,0,0,0-.747,1.191A4.013,4.013,0,0,0,128.881,21.931Zm9.835-5.036h1.863l.369-1.608a5.066,5.066,0,0,1,.545-1.441,3.454,3.454,0,0,1,.831-.976,3.161,3.161,0,0,1,1.077-.554,4.561,4.561,0,0,1,1.292-.176,5.324,5.324,0,0,1,.778.053,5.564,5.564,0,0,1,.646.132,4.679,4.679,0,0,1,.519.171,3.522,3.522,0,0,1,.387.18l-.905,1.354a2.338,2.338,0,0,0-.628-.264,3.14,3.14,0,0,0-.866-.114,1.861,1.861,0,0,0-1.2.391,2.324,2.324,0,0,0-.712,1.34l-.352,1.512h2.479l-.36,1.512h-2.461L139.332,30.14h-1.784l2.681-11.733h-1.872ZM2.374,28.832H20.4v7.122H17V31.7H8.019v8.085h8.649v2.789H8.019v8.566h2.523V54H2.374V51.145H4.765V31.7H2.374Zm20.67,0h8.168V31.7H28.688v19.44h8.683a1.242,1.242,0,0,0,.531-.125,1.886,1.886,0,0,0,.481-.324,1.642,1.642,0,0,0,.349-.457,1.129,1.129,0,0,0,.133-.523V46.546h3.154V54H23.044V51.145h2.391V31.7H23.044ZM55.484,54.5a11.478,11.478,0,0,1-4.765-.971,12.1,12.1,0,0,1-6.425-7.014,15,15,0,0,1-.88-5.1A14.564,14.564,0,0,1,44.3,36.3a12.714,12.714,0,0,1,2.49-4.159,11.7,11.7,0,0,1,3.818-2.789A11.759,11.759,0,0,1,64.2,32.144,12.676,12.676,0,0,1,66.673,36.3a14.687,14.687,0,0,1,.88,5.113,14.5,14.5,0,0,1-.888,5.1,12.83,12.83,0,0,1-2.49,4.159,11.642,11.642,0,0,1-3.818,2.8A11.5,11.5,0,0,1,55.484,54.5Zm0-3.088a7.788,7.788,0,0,0,3.578-.813,8.466,8.466,0,0,0,2.731-2.183,10,10,0,0,0,1.743-3.179,11.8,11.8,0,0,0,.614-3.818,11.93,11.93,0,0,0-.672-3.976A9.393,9.393,0,0,0,61.6,34.194a8.45,8.45,0,0,0-2.8-2.05,7.958,7.958,0,0,0-3.32-.722,7.839,7.839,0,0,0-3.586.813,8.438,8.438,0,0,0-2.739,2.183,9.979,9.979,0,0,0-1.743,3.188,12.538,12.538,0,0,0,.066,7.952,9.006,9.006,0,0,0,1.8,3.021A9.88,9.88,0,0,0,51.956,50.6,7.486,7.486,0,0,0,55.484,51.41ZM71.14,28.832H81.616a10.414,10.414,0,0,1,3.1.44,7.138,7.138,0,0,1,2.457,1.295A5.864,5.864,0,0,1,88.788,32.7a7.033,7.033,0,0,1,.581,2.938,5.353,5.353,0,0,1-.34,1.868,6.473,6.473,0,0,1-.946,1.71,7.2,7.2,0,0,1-1.436,1.4,6.569,6.569,0,0,1-1.81.946,3.78,3.78,0,0,1,.838.523,4.762,4.762,0,0,1,.8.83,6.759,6.759,0,0,1,.681,1.112,6.846,6.846,0,0,1,.49,1.336l1.395,5.479h2.175L91.245,54h-4.9l-1.876-7.653a6,6,0,0,0-1.569-3.03,4.087,4.087,0,0,0-2.88-.971H76.785v8.8h2.523V54H71.14V51.145h2.391V31.7H71.14ZM76.785,31.7v7.919h4.831a5.739,5.739,0,0,0,1.735-.249,3.781,3.781,0,0,0,1.361-.747,3.444,3.444,0,0,0,.9-1.237,4.249,4.249,0,0,0,.324-1.718A3.786,3.786,0,0,0,84.8,32.75,5.161,5.161,0,0,0,81.217,31.7Zm18.595-2.872h8.035V31.7h-2.391v19.44h2.391V54H95.379V51.145H97.77V31.7H95.379Zm12.817,0h9.363a11.863,11.863,0,0,1,6.192,1.71,12.052,12.052,0,0,1,4.308,4.482,12.772,12.772,0,0,1,1.187,3,13.22,13.22,0,0,1,.415,3.329,13.452,13.452,0,0,1-.415,3.37,13.058,13.058,0,0,1-1.187,3.021,12.234,12.234,0,0,1-1.868,2.565,11.937,11.937,0,0,1-2.44,1.976A11.767,11.767,0,0,1,117.56,54H108.2V51.145h2.391V31.7H108.2Zm5.645,2.872v19.44h3.918a7.264,7.264,0,0,0,3.279-.764,8.58,8.58,0,0,0,2.681-2.083,10.009,10.009,0,0,0,1.81-3.1,10.933,10.933,0,0,0,.664-3.843,10.633,10.633,0,0,0-.664-3.785,9.862,9.862,0,0,0-1.81-3.063,8.476,8.476,0,0,0-2.681-2.05,7.4,7.4,0,0,0-3.279-.747Zm34.3,19.44h2.092l-1.992-5.711h-9.679l-1.942,5.711h2.59V54h-8.168V51.145h2.191l7.836-22.312h4.9l7.819,22.313h2.523V54h-8.168Zm-8.633-8.467h7.77l-3.918-11.256Z"
+              transform="translate(94)"
+              fill="#fff"
+            />
+          </g>
+        </svg>
+      </a>
+      <nav>
+        <button>
+          <svg
+            id="Nav_element"
+            data-name="Nav element"
+            xmlns="http://www.w3.org/2000/svg"
+            width="162"
+            height="50"
+            viewbox="0 0 162 50"
+          >
+            <g id="Group_241" data-name="Group 241" transform="translate(111 12.24)">
+              <line id="Line_47" data-name="Line 47" x2="39.218" fill="none" stroke="#0021a4" stroke-width="5" />
+              <line
+                id="Line_48"
+                data-name="Line 48"
+                x2="39.218"
+                transform="translate(0 12.441)"
+                fill="none"
+                stroke="#0021a4"
+                stroke-width="5"
+              />
+              <line
+                id="Line_49"
+                data-name="Line 49"
+                x2="39.218"
+                transform="translate(0 24.881)"
+                fill="none"
+                stroke="#0021a4"
+                stroke-width="5"
+              />
+            </g>
+            <path
+              id="Path_210"
+              data-name="Path 210"
+              d="M1.44,0H2.7V-5.52c0-1.088-.1-2.224-.176-3.28h.064c.352.768.736,1.552,1.136,2.256L7.472,0h1.44V-10.5H7.648v5.472c0,1.088.1,2.24.176,3.328H7.76c-.368-.768-.736-1.552-1.136-2.256L2.88-10.5H1.44ZM13.6-5.856c.368-1.168.7-2.32,1.024-3.536h.064c.336,1.216.672,2.368,1.056,3.536l.5,1.584H13.1ZM10.384,0h1.36l1.008-3.184h3.824L17.568,0h1.424L15.456-10.5H13.92ZM22.112,0h1.552l3.408-10.5H25.7L23.952-4.832c-.368,1.232-.624,2.24-1.008,3.456H22.88c-.38-1.216-.656-2.224-1.008-3.456L20.24-10.5H18.816Zm6.4,0h1.344V-10.5H28.512Zm8.336.192A4.534,4.534,0,0,0,40.1-1.024V-5.44H36.64v1.1h2.224V-1.6a2.872,2.872,0,0,1-1.888.608C34.736-.992,33.5-2.64,33.5-5.28c0-2.608,1.348-4.22,3.46-4.22a2.939,2.939,0,0,1,2.256.944l.736-.832a3.977,3.977,0,0,0-3.024-1.3c-2.784,0-4.816,2.064-4.816,5.44C32.112-1.824,34.08.192,36.848.192Zm7.5-6.048c.368-1.168.7-2.32,1.024-3.536h.064c.336,1.216.672,2.368,1.056,3.536l.5,1.584H43.856ZM41.136,0H42.5l1-3.184h3.824L48.32,0h1.424L46.208-10.5H44.672ZM52.528,0h1.344V-9.36h3.184V-10.5h-7.7v1.14h3.168Zm6.4,0h1.344V-10.5H58.928Zm8.08.192c2.64,0,4.5-2.112,4.5-5.488,0-3.344-1.856-5.392-4.5-5.392s-4.48,2.032-4.48,5.392C62.528-1.92,64.368.192,67.008.192Zm0-1.184c-1.872,0-3.088-1.68-3.088-4.3S65.136-9.5,67.008-9.5s3.1,1.6,3.1,4.208S68.88-.992,67.008-.992ZM73.76,0h1.264V-5.52c0-1.088-.1-2.224-.176-3.28h.064c.352.768.736,1.552,1.136,2.256L79.792,0h1.44V-10.5H79.968v5.472c0,1.088.1,2.24.176,3.328H80.08c-.368-.768-.736-1.552-1.136-2.256L75.2-10.5H73.76Z"
+              transform="translate(12.5 30.138)"
+              fill="#0021a4"
+            />
+            <g id="Rectangle_1278" data-name="Rectangle 1278" fill="none" stroke="#0021a5" stroke-width="2">
+              <rect width="162" height="50" stroke="none" />
+              <rect x="1" y="1" width="160" height="48" fill="none" />
+            </g>
+          </svg>
+        </button>
+      </nav>
+    </header>
+    <main>
+      <div id="search-filter-buttons">
+        <!--What do I do with this to keep site accessible? SVG doesn't have text. <h2>Academics</h2> -->
+        <h1>Academics</h1>
+        <h2>Program Search</h2>
+        <form id="search" action="" method="get">
+          <fieldset><input type="search" placeholder="Search..." /></fieldset>
+          <button type="submit"><i class="fa fa-search"></i></button>
+          <!-- Would like to add text below button that updates dynamically and describes results, e.g., "Showing 245 results" -->
+        </form>
+        <div id="results-text"><span>Showing </span> <span># </span> <span>of results</span></div>
+        <button class="filter">
+          <a><i class="fa fa-bars" aria-hidden="true"></i><span>Filter</span></a>
+        </button>
+      </div>
+      <div id="results">
+        <ul id="programs">
+          <li data-id="1">Computer Science</li>
+          <li data-id="2">Digital Arts and Sciences</li>
+          <li data-id="3">Telecommunication: Media and Society</li>
+          <li data-id="4">Accounting</li>
+          <li data-id="5">Accounting Minor</li>
+          <li data-id="6">Accounting Minor UF Online</li>
+          <li data-id="7">Actuarial Science Minor</li>
+          <li data-id="8">Advanced Engineering Ceramics Certificate</li>
+          <li data-id="9">Advertising</li>
+          <li data-id="10">Advertising | Persuasive Messaging UF Online</li>
+          <li data-id="11">Aerospace Engineering</li>
+          <li data-id="12">Aerospace Leadership Minor</li>
+          <li data-id="13">African Languages</li>
+          <li data-id="14">African Studies Minor</li>
+          <li data-id="15">African-American Studies</li>
+          <li data-id="16">African-American Studies Minor</li>
+          <li data-id="17">Agricultural and Natural Resource Communication Minor</li>
+          <li data-id="18">Agricultural and Natural Resource Ethics and Policy Minor</li>
+          <li data-id="19">Agricultural and Natural Resource Law Minor</li>
+          <li data-id="20">Agricultural Curriculum and Development Minor</li>
+          <li data-id="21">Agricultural Education and Communication</li>
+          <li data-id="22">Agricultural Operations Management</li>
+          <li data-id="23">Agroecology and Sustainable Food Systems Certificate</li>
+          <li data-id="24">American Indian and Indigenous Studies Minor</li>
+          <li data-id="25">Animal Genetics Certificate</li>
+          <li data-id="26">Animal Sciences</li>
+          <li data-id="27">Anthropology</li>
+          <li data-id="28">Anthropology Minor</li>
+          <li data-id="29">Anthropology Minor UF Online</li>
+          <li data-id="30">Anthropology UF Online</li>
+          <li data-id="31">Applied Physiology and Kinesiology</li>
+          <li data-id="32">Applied Theater for Health Certificate</li>
+          <li data-id="33">Arabic</li>
+          <li data-id="34">Arabic Language and Literature Minor</li>
+          <li data-id="35">Architecture</li>
+          <li data-id="36">Art Education Certificate</li>
+          <li data-id="37">Art History</li>
+          <li data-id="38">Art History Minor</li>
+          <li data-id="39">Art History Minor | New World School of the Arts</li>
+          <li data-id="40">Art Minor</li>
+          <li data-id="41">Art | BA</li>
+          <li data-id="42">Art | BFA</li>
+          <li data-id="43">Artificial Intelligence Fundamentals and Applications Certificate</li>
+          <li data-id="44">Asian Studies Minor</li>
+          <li data-id="45">Asian-American Studies Minor</li>
+          <li data-id="46">Astronomy and Astrophysics</li>
+          <li data-id="47">Arts in Medicine (Graduate Certificate)</li>
+          <li data-id="48">Computer Science (Ph.D)</li>
+          <li data-id="49">Curriculum and Instruction (M.Ed)</li>
+          <li data-id="50">Curriculum and Instruction (Ph.D)</li>
+          <li data-id="51">Computer Science</li>
+          <li data-id="52">Linguistics (B.S.)</li>
+          <li data-id="53">Linguistics (M.A.)</li>
+          <li data-id="54">Linguistics (Ph.D)</li>
+        </ul>
+      </div>
+      <div id="filter-panel">
+        <div id="filter-header" class="orange-background"><span>FILTER BY</span></div>
+        <div id="program-type">
+          <h3>Program Type</h3>
+          <form action="" method="get">
+            <fieldset>
+              <ul>
+                <li>
+                  <label> <input type="checkbox" value="Bachelors" />Bachelors </label>
+                </li>
+                <li>
+                  <label> <input type="checkbox" value="Masters" />Masters </label>
+                </li>
+                <li>
+                  <label> <input type="checkbox" value="Doctoral" />Doctoral </label>
+                </li>
+                <li>
+                  <label> <input type="checkbox" value="Certificate" />Certificate </label>
+                </li>
+                <li>
+                  <label> <input type="checkbox" value="Non-degree" />Non-degree </label>
+                </li>
+              </ul>
+            </fieldset>
+          </form>
+        </div>
+        <div id="online">
+          <h3>UF Online</h3>
+          <form action="" method="get">
+            <fieldset>
+              <ul>
+                <li>
+                  <label> <input type="checkbox" value="Online" />Online only </label>
+                </li>
+              </ul>
+            </fieldset>
+          </form>
+        </div>
+        <div id="pursuit">
+          <h3>Pursuit</h3>
+          <form action="" method="get">
+            <fieldset>
+              <ul>
+                <li>
+                  <label> <input type="checkbox" value="Animals" checked />Animals </label>
+                </li>
+                <li>
+                  <label> <input type="checkbox" value="Art and Design" checked />Art and Design </label>
+                </li>
+                <li>
+                  <label> <input type="checkbox" value="Business" checked />Business </label>
+                </li>
+                <li>
+                  <label> <input type="checkbox" value="Communication" checked />Communication </label>
+                </li>
+                <li>
+                  <label> <input type="checkbox" value="Earth Sciences" checked />Earth Sciences </label>
+                </li>
+                <li>
+                  <label> <input type="checkbox" value="Health and Wellness" checked />Health and Wellness </label>
+                </li>
+                <li>
+                  <label> <input type="checkbox" value="Social Sciences" checked />Social Sciences </label>
+                </li>
+                <li>
+                  <label> <input type="checkbox" value="Technology" checked />Technology </label>
+                </li>
+              </ul>
+            </fieldset>
+          </form>
+        </div>
+        <div id="college">
+          <h3>College</h3>
+          <form action="" method="get">
+            <fieldset>
+              <ul>
+                <li>
+                  <label>
+                    <input type="checkbox" value="Agricultural and Life Sciences" checked />Agricultural and Life Sciences
+                  </label>
+                </li>
+                <li>
+                  <label> <input type="checkbox" value="Arts" checked />Arts </label>
+                </li>
+                <li>
+                  <label>
+                    <input type="checkbox" value="Business, Warrington College" checked />Business, Warrington College
+                  </label>
+                </li>
+                <li>
+                  <label> <input type="checkbox" value="Education" checked />Education </label>
+                </li>
+                <li>
+                  <label>
+                    <input type="checkbox" value="Engineering, Herbert Wertheim College" checked />Engineering, Herbert Wertheim
+                    College
+                  </label>
+                </li>
+                <li>
+                  <label> <input type="checkbox" value="Liberal Arts and Sciences" checked />Liberal Arts and Sciences </label>
+                </li>
+              </ul>
+            </fieldset>
+          </form>
+        </div>
+        <div>
+          <button id="btn-done" class="gray-background"><span class="button-text">DONE</span></button>
+        </div>
+      </div>
+    </main>
+  </body>
 </html>
